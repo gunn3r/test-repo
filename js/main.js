@@ -15,3 +15,11 @@ hobbies.forEach(function(item, index) {
     console.log("I like ", item, index);
 })
 btn.addEventListener("click", buttonClicked);
+
+textB.addEventListener("keypress", itemKeyPress);
+
+function itemKeyPress(event) {
+    if(event.which === 13){
+        buttonClicked();
+    }
+}
